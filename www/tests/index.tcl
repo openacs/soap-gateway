@@ -24,7 +24,7 @@ set context "Tests"
 set caption "tests"
 
 # is this connection secure
-if [ad_secure_conn_p] {
+if [security::secure_conn_p] {
 
 	# calc http name
 	set http [format "http://%s%s"  [ns_info hostname] [file join / [soap::get_base_url] tests]]
