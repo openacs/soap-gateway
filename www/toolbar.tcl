@@ -82,4 +82,3 @@ foreach tool $tools {
     }
 }
 
-ad_template_return
