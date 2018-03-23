@@ -93,7 +93,7 @@ if {[info exists namespace_id]} {
 # create form
 template::form create namespace_form
 
-# test for namespace_id assigment
+# test for namespace_id assignment
 if {[info exists namespace_id]} {
 
     # set editing 
@@ -207,7 +207,7 @@ if { $editing_namespace != 0 } {
     
     set method_form:properties(action) edit-namespace
     
-    # test for method_id assigment
+    # test for method_id assignment
     if [info exists method_id] {
 	
 	# set editing 

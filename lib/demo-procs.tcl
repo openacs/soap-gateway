@@ -61,7 +61,7 @@ namespace eval sg::demo {
 		expr
 	} {
 	
-		Performs an evaluation of the expression argument. The method attemps to provide some
+		Performs an evaluation of the expression argument. The method attempts to provide some
 		safety by scanning for procedure notation. If detected, an exception is thrown.
 		
 		@author William Byrne
