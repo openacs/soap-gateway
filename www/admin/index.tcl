@@ -89,7 +89,7 @@ foreach s [soap::query_services -unpublished 1 -published 0] {
 }
 
 # set context
-set context "Administation"
+set context "Administration"
 
 # update caption
 set caption "admin"

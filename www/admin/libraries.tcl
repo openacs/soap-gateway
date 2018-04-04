@@ -113,7 +113,7 @@ template::element create library_form path \
 template::element set_value library_form path "packages/<your-package>/lib/<your-source>.tcl"
 
 # set context
-set context "Administation"
+set context "Administration"
 
 # update caption
 set caption "admin"

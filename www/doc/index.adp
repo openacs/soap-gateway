@@ -70,7 +70,7 @@
   <li>Create a sub-site under the Main site and call it 'soap'. </li>
   <li>Create a new application by selecting the SOAP Gateway.</li>
   <li>For now, call the new soap-gateway application SOAP Gateway. </li>
-  <li>Refresh this page so <a href="@base@admin" title="Adminitration">this admin 
+  <li>Refresh this page so <a href="@base@admin" title="Administration">this admin 
 	hot link</a> points to the soap-gateway admininistration pages.</li>
   <li>Under the Maintenance section, you should see unpublished services: 'workspace' 
 	and 'interop'. Import both.</li>
