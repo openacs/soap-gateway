@@ -30,25 +30,25 @@
   <li><a href="#License">License</a></li>
 </ol>
 <p><a name="Overview" class="section"><u>Overview</u></a> <a href="#TOC" title="Table of Contents">(toc)</a></p>
-<p>The Simple Object Access Protocol (<a href="#SOAPv12">SOAP</a>) <a href="#SOAPv11">v1.1</a> 
-  was <a href="#SOAPSubmission">submitted</a> to W3C on April 18, 2000. Its compatriot 
+<p>The Simple Object Access Protocol (<a href="#SOAPv12">SOAP</a>) <a href="#SOAPv11">v1.1</a>
+  was <a href="#SOAPSubmission">submitted</a> to W3C on April 18, 2000. Its compatriot
   Web Services Description Language (<a href="#WSDLv11">WSDL</a>) was <a href="#WSDLSubmission">submitted</a> 
-  on March 14, 2001. Together they attempt to unify diverse systems using a form 
-  of XML RPC. Most major software vendors are involved to some extent. Its future 
+  on March 14, 2001. Together they attempt to unify diverse systems using a form
+  of XML RPC. Most major software vendors are involved to some extent. Its future
   looks bright. </p>
-<p>SOAP fits nicely into the Client/Server topology. Given a client that needs 
-  some functionality available on a server, SOAP can be used to specify an operation 
-  and its arguments to be submitted by the client to the server. At it's root, 
-  the data representing the operation is fairly basic. If the connection between 
-  the client and server were a TCP wire, a data trace would show about a page 
-  of XML. The XML is not complex and is often decipherable at a glance. The XML 
-  data is specified as a <a href="#SOAPv11">SOAP Envelope</a>. An evolving <a href="#SOAPv12">SOAP 
-  specification</a> defines the Envelope and its progeny. The XML data transmitted 
-  between the client and server is not arbitrary and should conform to a referenced 
-  WSDL instance published by the server. It's the WSDL that defines the published 
-  services and the invocation formats required for execution. The vast majority 
-  of SOAP documentation demonstrates SOAP over HTTP. Another mentioned transport 
-  is SMTP. In each case, the SOAP Envelope follows the respective header as an 
+<p>SOAP fits nicely into the Client/Server topology. Given a client that needs
+  some functionality available on a server, SOAP can be used to specify an operation
+  and its arguments to be submitted by the client to the server. At its root,
+  the data representing the operation is fairly basic. If the connection between
+  the client and server were a TCP wire, a data trace would show about a page
+  of XML. The XML is not complex and is often decipherable at a glance. The XML
+  data is specified as a <a href="#SOAPv11">SOAP Envelope</a>. An evolving <a href="#SOAPv12">SOAP
+  specification</a> defines the Envelope and its progeny. The XML data transmitted
+  between the client and server is not arbitrary and should conform to a referenced
+  WSDL instance published by the server. It's the WSDL that defines the published
+  services and the invocation formats required for execution. The vast majority
+  of SOAP documentation demonstrates SOAP over HTTP. Another mentioned transport
+  is SMTP. In each case, the SOAP Envelope follows the respective header as an
   XML Payload.</p>
 <p>Many web servers have been retrofitted to support a SOAP subsystem; e.g., Websphere, 
   Apache, iPlanet, IIS, etc. There are a handful of SOAP toolkits. To name a few, 
