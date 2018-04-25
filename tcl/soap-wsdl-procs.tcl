@@ -36,7 +36,7 @@ ad_proc -private soap::wsdl::method_get_idls {
     @author William Byrne
 } {
     # init
-    set methods [list]
+    set methods {}
 
     # loop through methods belonging to namespace ??? XQL
     db_foreach select_idls {} { 
@@ -255,7 +255,7 @@ ad_proc -private soap::wsdl::do_generate_wsdl {
     set funcs [soap::wsdl::method_get_idls $nid]
 	
     # decl methods
-    set methods [list]
+    set methods {}
 	
     # set up regexp expression for "C" style function 
     set expr [soap::wsdl::get_style_parser_expr C]

@@ -136,7 +136,7 @@ ad_proc -private soap::server::lib::library_get_paths {
     @author William Byrne
 } {
     # init
-    set paths [list]
+    set paths {}
 
     # loop through libraries
     db_foreach select_lib_paths {} { 
@@ -426,7 +426,7 @@ ad_proc -private soap::server::lib::idl_to_xsd {
     }
 
     # setup arg list
-    set xargs [list]
+    set xargs {}
 
     # get arg parser expr
     set expr [soap::wsdl::get_style_parser_expr -argpart 1 C]
@@ -556,7 +556,7 @@ ad_proc -private soap::server::lib::import_service {
 	    set procs [list $proc]
 	} else {
 	    # clear, not found
-	    set procs [list]
+	    set procs {}
 	}
     }
 

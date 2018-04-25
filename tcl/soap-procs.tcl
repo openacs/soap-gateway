@@ -205,7 +205,7 @@ ad_proc -private soap::namespace_get_names {
     @author William Byrne
 } {
     # init
-    set names [list]
+    set names {}
 
     # loop through namespaces
     db_foreach select_services {} { 
@@ -397,7 +397,7 @@ ad_proc -private soap::get_source_procs {
     @param service
 } {
     # decl unpublished list
-    set procs [list]
+    set procs {}
 
     # safe fetch
     catch {
@@ -406,7 +406,7 @@ ad_proc -private soap::get_source_procs {
     }
 
     # decl result
-    set result [list]
+    set result {}
 
     # loop through source procs
     foreach proc $procs {
@@ -520,7 +520,7 @@ ad_proc -private soap::get_source_idls {
     set procs [soap::get_source_procs $service]
     
     # decl result list
-    set result [list]
+    set result {}
     
     # loop though procs
     foreach proc $procs {
@@ -539,7 +539,7 @@ ad_proc -private soap::method_get_procs {
     @param namespace_id
 } {
     # init
-    set procs [list]
+    set procs {}
 
     db_foreach select_procs {} { 
 	# append method proc
@@ -562,8 +562,8 @@ ad_proc -private soap::diff_methods {
     set procs [soap::get_source_procs $service]
     
     # decl published list
-    set methods [list]
-    set idls [list]
+    set methods {}
+    set idls {}
     
     # get namespace id
     set nid [soap::server::namespace_get_id $service]
@@ -579,27 +579,27 @@ ad_proc -private soap::diff_methods {
     }
     
     # decl history list
-    set history [list]
+    set history {}
     
     # decl diff array
-    array set diffs [list]
+    array set diffs {}
     
     # decl short names list for procs
-    set shorts [list]
+    set shorts {}
     
     # get idl parser expression for method - "C" syntax
     set method_expr [soap::wsdl::get_style_parser_expr C]
     set arg_expr [soap::wsdl::get_style_parser_expr -argpart 1 C]
     
     # decl published list
-    set published [list]
+    set published {}
     
     # duplicate procs as they're duplicated in the WSDL 
     # database - this will ensure
     # every entry in the database is tested. ??? weak
     
     # decl dups
-    set dups [list]
+    set dups {}
     
     # scan
     foreach proc $procs {
@@ -681,7 +681,7 @@ ad_proc -private soap::diff_methods {
 		if [string equal $short $binding] {
 		    
 		    # decl pargs
-		    set pargs [list]
+		    set pargs {}
 		    
 		    # invoke regexp to get args
 		    if [regexp $method_expr $idl {} type method argz] {
@@ -809,7 +809,7 @@ ad_proc -private soap::diff_methods {
 	if [regexp $method_expr $idl {} type method argz] {
 
 	    # decl pargs
-	    set pargs [list]
+	    set pargs {}
 
 	    # loop through args
 	    foreach arg [split $argz ,] {

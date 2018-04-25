@@ -22,7 +22,7 @@ set pid [soap::package_id -throw f]
 if { $pid == 0 } {
 	
     # must be just starting out - clear everything
-    set defaults [list]
+    set defaults {}
 	
 # test for admin user
 } elseif { [soap::server::has_permission $pid admin] != 0 } { 
