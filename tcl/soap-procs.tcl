@@ -232,7 +232,7 @@ ad_proc -private soap::query_services {
     # test for request
     if $unpublished {
 	# decl unpublished list
-	set unpub [list]
+	set unpub {}
 	
 	# create lower case services
 	set lowercase_services [string tolower $services]
