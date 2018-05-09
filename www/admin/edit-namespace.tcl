@@ -234,7 +234,7 @@ if { $editing_namespace != 0 } {
 	-value {}; #$idl
 	
     # decl procs
-    set procs2 {}
+    set procs2 [list]
 	
     # get source procs and double entries for HTML options
     foreach p [soap::get_source_procs $service] {
@@ -356,7 +356,7 @@ if { $editing_namespace != 0 } {
     }
     
     # record history list of db entries
-    set history {}
+    set history [list]
     
     # query methods
     db_multirow -extend {edit delete cancel diff} methods \
