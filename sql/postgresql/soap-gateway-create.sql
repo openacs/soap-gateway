@@ -129,7 +129,7 @@ create function sg_unique(integer,varchar)
 returns text as '
 begin
 	return '''' || $1 || ''-'' || lower($2);
-end;' language 'plpgsql' with(iscachable);;
+end;' language 'plpgsql' IMMUTABLE;
 
 
 create unique index sg_methods_idx1 on sg_methods(sg_unique(namespace_id, method));
