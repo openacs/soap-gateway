@@ -531,21 +531,21 @@ end;' language 'plpgsql';
 	
 -- trigger functions
 create function sg_methods__itrg ()
-returns opaque as '
+returns trigger as '
 begin
     perform sg_namespaces__dirty(new.namespace_id);
     return new;
 end;' language 'plpgsql';
 
 create function sg_methods__dtrg ()
-returns opaque as '
+returns trigger as '
 begin
     perform sg_namespaces__dirty(old.namespace_id);
     return old;
 end;' language 'plpgsql';
 
 create function sg_methods__utrg ()
-returns opaque as '
+returns trigger as '
 begin
     perform sg_namespaces__dirty(new.namespace_id);
 	if new.namespace_id <> old.namespace_id then
