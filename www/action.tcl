@@ -3,7 +3,7 @@
 # page contract not included due to cost of parsing payload - (not necessary)
 
 # generate temp file name
-set tmp [ns_tmpnam]
+set tmp [ns_mktemp]
 
 # open it
 set f [open $tmp w+]
@@ -13,7 +13,7 @@ set f [open $tmp w+]
 set err [catch {
 	
 	# dump payload to file - there's gotta be a better way to get the content
-	ns_conncptofp $f
+	ns_conn copy 0 [ns_conn contentlength] $f
 	
 	# get file size
 	set size [tell $f]
@@ -58,7 +58,7 @@ if { $err != 0 } {
 	catch { close $f }
 	
 	# unlink file
-	ns_unlink $tmp
+	file delete $tmp
 
 	# throw
 	error "$msg\nfile: $tmp" $savedInfo
@@ -69,7 +69,7 @@ if { $err != 0 } {
 	catch { close $f }
 
 	# unlink file
-	ns_unlink $tmp
+	file delete $tmp
 
 
 }
